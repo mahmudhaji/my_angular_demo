@@ -1,0 +1,91 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button> --> 
+  <div class="col">
+  <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup" class="row">
+                <ng-template matStepLabel>Fill out your name</ng-template>
+                    <div class="col-md-3">
+                        <mat-form-field class="w-100 example-full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First name" required formControlName="firstCtrl" required>
+                            <!-- <mat-label>Name</mat-label>
+                            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+                        </mat-form-field>        
+                     </div>
+                     <div class="col-md-3">
+                        <mat-form-field class="w-100 example-full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First name" required formControlName="firstCtrl" required>
+                            <!-- <mat-label>Name</mat-label>
+                            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+                        </mat-form-field>        
+                     </div>
+
+                     <div class="col-md-3">
+                        <mat-form-field class="w-100 example-full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First name" required formControlName="firstCtrl" required>
+                            <!-- <mat-label>Name</mat-label>
+                            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+                        </mat-form-field>        
+                     </div>
+                     <div class="col-md-3">
+                        <mat-form-field class="w-100 example-full-width" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First name" required formControlName="firstCtrl" required>
+                            <!-- <mat-label>Name</mat-label>
+                            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+                        </mat-form-field>        
+                     </div>
+    
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+    
+
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+        <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+                <mat-label>Enter your password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>School</mat-label>
+                <mat-select>
+                  <mat-option value="one">Science School</mat-option>
+                  <mat-option value="two">Art School</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button mat-stroked-button (click)="fileInput.click()">Choose File</button>
+              <input hidden #fileInput type="file" (change)="onFileSelected($event)">
+
+            <!-- <mat-form-field>
+                <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+                <input hidden (change)="onFileSelected($event)" #fileInput type="file">
+                <span class="file-name">{{selectedFile?.name}}</span>
+              </mat-form-field> -->
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+    </mat-step>
+</mat-stepper>
+
+</div>

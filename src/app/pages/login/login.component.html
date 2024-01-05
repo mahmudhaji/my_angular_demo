@@ -1,0 +1,40 @@
+<body>
+    <div class="login-container">
+        <div class="login-panel">
+            <div class="logo">
+                <img class="logo-img" src="../../assets/egaz.png" alt="eGaz Logo">
+                <div class="logo-text">
+                    <h3>eGaz</h3>
+                    <h1>TRAINING</h1>
+                </div>
+            </div>
+            <hr>
+            <form autocomplete="off" action="#" id="login-form" method="post">
+                <div class="form-group">
+                    <label for="username">Username (Login ID)</label>
+                    <input name="username" id="username" class="input-field" placeholder="Enter Login ID" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" id="password" class="input-field" placeholder="Enter Password" type="password">
+                </div>
+                <div id="loginPassCode" class="form-group" style="display:none">
+                    <label for="password_code">Login Passcode</label>
+                    <input name="password_code" id="password_code" class="input-field" placeholder="Enter OTP Here" type="password">
+                </div>
+                <div class="form-group">
+                    <button name="submit" class="login-button" (click)="onLayout()">Sign In</button>
+                </div>
+                <div class="form-group">
+                    <div class="signup-links">
+                        <a href="signuptraining" class="signup-link">Trainee? Sign Up here</a>
+                        <a href="#" class="signup-link">eGaz Staff? Sign Up Here</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="forgot-password-link">Forgotten login Password? Request New</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

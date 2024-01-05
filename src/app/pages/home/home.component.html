@@ -1,0 +1,44 @@
+<div class="container mt-3">
+    <h2>WELCOME OUR QUEST  </h2>
+
+    <h3>{{title}}</h3>
+    <p>"Welcome to a week of learning about our technology for better development."</p>
+    
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>SESSION NAME</th>
+            <th>STATUS</th>
+            <th>DISCRIPTION</th>
+            <th>TIME</th>
+            <th>DATE</th>
+            <th>VENUE</th>
+            <th>MATERIALS</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td>1</td>
+            <td>Anna</td>
+            <td>active</td>
+            <td>Pitt</td>
+            <td>35</td>
+            <td>New York</td>
+            <td>USA</td>
+            <td>
+                <button mat-button color="accent" (click)="onVideo()"><mat-icon>movie</mat-icon>videos</button>
+                <p></p>
+                <button mat-button color="warn"><mat-icon>note</mat-icon>document</button>
+                <p></p>
+                <button mat-button color="primary" (click)="onImages()"><mat-icon> insert_photo</mat-icon>images</button>
+                
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

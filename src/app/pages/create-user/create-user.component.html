@@ -1,0 +1,32 @@
+<app-card title="Create User Form" subtitle="create new user">
+
+    <form [formGroup]="userForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="name">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>department</mat-label>
+                    <input matInput formControlName="department" placeholder="department">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>email</mat-label>
+                    <input matInput formControlName="email" placeholder="email">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field class="w-100 example-full-width" appearance="outline">
+                    <mat-label>location</mat-label>
+                    <input matInput formControlName="location" placeholder="location">
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+    <button mat-raised-button color="primary" [disabled]="userForm.invalid" (click)="onSave()">save</button>
+</app-card>

@@ -1,0 +1,46 @@
+
+<form class="example-form">
+  <div class="row">
+    <h3><b>Venue Information</b></h3>
+      <div class="col-md-4">
+          <mat-form-field class="w-100 example-full-width" appearance="outline">
+              <mat-label>venue name</mat-label>
+              <input matInput placeholder="Enter venueName">
+            </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class=" w-100 example-full-width" appearance="outline">
+          <mat-label>Time</mat-label>
+          <mat-date-range-input
+            [formGroup]="campaignOne"
+            [rangePicker]="campaignOnePicker"
+            [comparisonStart]="campaignTwo.value.start"
+            [comparisonEnd]="campaignTwo.value.end">
+            <input matStartDate placeholder="Start date" formControlName="start">
+            <input matEndDate placeholder="End date" formControlName="end">
+          </mat-date-range-input>
+          <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+          <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+        </mat-form-field>
+        
+      </div>
+      <div class="col-md-4">
+        <mat-form-field class="w-100 example-full-width" appearance="outline">
+          <mat-label>day</mat-label>
+          <mat-select >
+            <mat-option value="primary">Monday</mat-option>
+            <mat-option value="accent">Tuesday</mat-option>
+            <mat-option value="accent">Wenesday</mat-option>
+            <mat-option value="accent">Thursday</mat-option>
+            <mat-option value="accent">Friday</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+  </div>
+        <div class="example-button-row">
+              <button mat-raised-button color="primary" >save</button>
+              <button mat-raised-button color="accent" >clear</button>
+        </div>
+</form>
